@@ -1,0 +1,34 @@
+procedure TPintarForm.Pintar ;
+begin
+  with MainForm do begin
+    with eGh do begin
+      Clear ;
+      Xaxis.Title := 'Lenght (L0)' ;
+      Yaxis.Title := 'Energy (E0)' ;
+    end ;
+    PintarE ; Egh.Update ;
+    with fGh do begin
+      Clear ;
+      Xaxis.Title := 'Lenght (L0)' ;
+      Yaxis.Title := 'Forc (E0/L0)' ;
+    end ;
+   PintarF ; Fgh.Update ;
+    with nGh do begin
+      Clear ;
+      Xaxis.Title := 'Lenght (L0)' ;
+      Yaxis.Title := 'N' ;
+    end ;
+    PintarN ; Ngh.Update ;
+    with gGh do begin
+      Clear ;
+      Xaxis.Title := 'Lenght (L0)' ;
+      Yaxis.Title := 'Conductance (G0)' ;
+    end ;
+    PintarG ; gGh.Update
+  end;
+end ;
+
+          with MainForm do begin
+            eGh[1].AddPoint(y_point,x_point) ;
+            eGh[1].PlotPoints:= False ;
+          end ;
